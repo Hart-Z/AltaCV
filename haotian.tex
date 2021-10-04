@@ -19,7 +19,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm,columnsep=1cm}
+\geometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm,columnsep=0.5cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -67,23 +67,18 @@
 % \input{pubs-num.cfg}
 
 \begin{document}
-\name{Your Name Here}
-\tagline{Your Position or Tagline Here}
+\name{Haotian Zhou}
+\tagline{Software Engineer @ Amazon | MSAII Alumni @ CMU}
 %% You can add multiple photos on the left or right
 % \photoR{2.8cm}{photo}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
-  \email{your_name@email.com}
-  \phone{000-00-0000}
-  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  \location{Location, COUNTRY}
-  \homepage{www.homepage.com}
-  \twitter{@twitterhandle}
-  \linkedin{your_id}
-  \github{your_id}
-  \orcid{0000-0000-0000-0000}
+  \email{haotian2@alumni.cmu.edu}
+  \phone{412-708-3839}
+  \location{Seattle, USA}
+  \linkedin{https://www.linkedin.com/in/haotian-zhou/}
   %% You can add your own arbitrary detail with
   %% \printinfo{symbol}{detail}[optional hyperlink prefix]
   % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
@@ -109,117 +104,108 @@
 % \AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.68}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
-  \cvsection{Experience}
+  \cvsection{Experience \& Projects}
 
-  \cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
+  \cvcorp{Amazon}{SDE Fulltime}{Jul 2020 - Present}{Seattle}
+
+  \cvproject{Seller LeveL CIV\footnote[1]{CIV : Consumer Instock Value, an economic concept that evaluates long-term impact of a retail offer instock status change} for Amazon.in} {Provide CIV estimates for more than 120,000 sellers in India separately}
   \begin{itemize}
-    \item Job description 1
-    \item Job description 2
+    \item Build entire data pipeline from ... to ... . automated the pipeline based on AWS Step Function in Python
+    \item Design redshift table; implement ETL jobs in hql and scala to load data via EMR
+    \item Refactor RESTful Service API to support seller-level granularity. use cache to increase ...
+  \end{itemize}
+
+  \cvproject{CIV Data Pipeline Infrastructure Optimization} {Greatly improved the performance, reliability and scalability of internal systems}
+  \begin{itemize}
+    \item EMR-DDB Migration : DynamoDB import via EMR, 7 times faster
+    \item Lambda Function support, NAWS migration, get rid of hosts, severless
+  \end{itemize}
+
+  \cvproject{Contribution Profit Boost Pipeline Automation} {Reduced manual operation by 80\%. Shortened the entire process from 1 month to 5 days}
+  \begin{itemize}
+    \item Coordinate \& implement this automated pipeline across multiple teams(...)
+    \item use S3, StepFunction, Pandas, save 70\% of manual works during this process
   \end{itemize}
 
   \divider
 
-  \cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
-  \begin{itemize}
-    \item Job description 1
-    \item Job description 2
-  \end{itemize}
+  \cvcorp{Amazon}{SDE Intern}{May 2019 - Aug 2019}{Seattle}
 
-  \cvsection{Projects}
-
-  \cvevent{Project 1}{Funding agency/institution}{}{}
+  \cvproject{CIV Backend 2.0 Prototype} {Designed and implemented extendable Data pipeline backend built fully on Native AWS}
   \begin{itemize}
-    \item Details
+    \item Built data pipeline backend with centralized workflow control based on AWS Step Function
+    \item Developed new features by integrating multiple AWS Services : Lambda Function, CloudWatch, SNS, EMR
   \end{itemize}
 
   \divider
 
-  \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-  A short abstract would also work.
+  \cvcorp{Carnegie Mellon University }{Capstone Project }{Jan 2020 - May 2020}{Pittsburgh}
 
-  \medskip
-
-  \cvsection{A Day of My Life}
-
-  % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-  % \wheelchart{outer radius}{inner radius}{
-  % comma-separated list of value/text width/color/detail}
-  \wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
-  8/8em/accent!60/Daytime job,
-  2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
-  }
-
-
+  \cvproject{Chatbot to Chatbot QA system  }{Automated chatbot that can make outbound call to IVR system, answer IVR\footnote[2]{IVR: Interactive Voice Response System} questions \& transfer call back to human}
+  \begin{itemize}
+    \item Integrated with Twillio APIs to make outbound / inbound call and get audio streams
+    \item Integrate with Google Cloud Speech-to-Text API to transcribe audit stream in real-time
+    \item Applied NLP technologies to detect questions, search \& build answers according to information stored in database
+    \item Sponsor Scholarship Winner
+  \end{itemize}
 
   %% Switch to the right column. This will now automatically move to the second
   %% page if the content is too long.
   \switchcolumn
 
-  \cvsection{My Life Philosophy}
+  \cvsection{Career Objective}
+  % SDE :
+  
+  % MLE :
+  % Data engineer :
+  % Distributed Sys :
 
-  \begin{quote}
-    ``Something smart or heartfelt, preferably in one sentence.''
-  \end{quote}
 
-  \cvsection{Most Proud of}
+  \cvsection{Area Of Interest}
 
-  \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+  \cvtag{Software Development}
+  \cvtag{NLP}
+  \cvtag{Cloud Computing}
+  \cvtag{Data Engineering}
+  \cvtag{Machine Learning}
+  \cvtag{Deep Learning}
 
-  \divider
+  \cvsection{Technical SKills}
 
-  \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+  \cvskill{Python}{4}
+  \cvskill{Java}{4}
+  \cvskill{C}{4}
+  \cvskill{Scala}{3}
+  \cvskill{JavaScript}{3}
+  \cvskill{Apache Ant}{3}
+  \cvskill{SQL \& HQL}{4}
+  \par
+  \bigskip\normalsize
 
-  \divider
+  \cvskill{AWS}{5}
+  \cvskill{Git}{4}
+  \cvskill{Spark \& Hadoop}{4}
+  \cvskill{DeepLearning}{4}
+  \cvskill{NLP}{4}
+  \cvskill{Distributed System}{3}
 
-  \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+  % \cvtag{Motivator \& Leader}
 
-  \cvsection{Strengths}
-
-  \cvtag{Hard-working}
-  \cvtag{Eye for detail}\\
-  \cvtag{Motivator \& Leader}
-
-  \divider\smallskip
-
-  \cvtag{C++}
-  \cvtag{Embedded Systems}\\
-  \cvtag{Statistical Analysis}
-
-  \cvsection{Languages}
-
-  \cvskill{English}{5}
-  \divider
-
-  \cvskill{Spanish}{4}
-  \divider
-
-  \cvskill{German}{3.5} %% Supports X.5 values.
-
-  %% Yeah I didn't spend too much time making all the
-  %% spacing consistent... sorry. Use \smallskip, \medskip,
-  %% \bigskip, \vspace etc to make adjustments.
-  \medskip
+  \cvsection{Personal SKills}
+  \cvtag{Quick Learner}
+  \cvtag{Teamworking}
+  \cvtag{Work well under pressure}
 
   \cvsection{Education}
 
-  \cvevent{Ph.D.\ in Your Discipline}{Your University}{Sept 2002 -- June 2006}{}
-  Thesis title: Wonderful Research
+  \cvedu{M.S. Artificial Intelligence}{Carnegie Mellon University}{2018-2020}{GPA: 3.95}
+  \cvedu{B.E. Computer Science}{Harbin Institute of Technology}{2014-2018}{GPA: 3.75}
 
-  \divider
-
-  \cvevent{M.Sc.\ in Your Discipline}{Your University}{Sept 2001 -- June 2002}{}
-
-  \divider
-
-  \cvevent{B.Sc.\ in Your Discipline}{Stanford University}{Sept 1998 -- June 2001}{}
 
 
 \end{paracol}
