@@ -19,7 +19,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm,columnsep=0.5cm}
+\geometry{left=0.6cm,right=0.6cm,top=1cm,bottom=1cm,columnsep=0.5cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -115,22 +115,21 @@
 
   \cvproject{Seller LeveL CIV\footnote[1]{CIV : Consumer Instock Value, an economic concept that evaluates long-term impact of a retail offer instock status change} for Amazon.in} {Provide CIV estimates for more than 120,000 sellers in India}
   \begin{itemize}
-    \item Build and automate backend data pipeline which includes . automated the pipeline based on AWS Step Function in Python
-    \item Work together with economists to develop machine learning model for Seller Level CIV.
-    \item Design redshift table; implement ETL jobs in hql and scala to load data via EMR
-    \item Refactor RESTful Service API to support seller-level granularity. use cache to increase ...
+    \item Built data pipelines based on AWS StepFunction. Created ETL jobs to collect data from S3, run prediction on EMR and publish estimates to Redshift
+    \item Worked together with economists to develop ML model
+    \item Refactored RESTful Service API to support seller-level granularity.
   \end{itemize}
 
-  \cvproject{CIV Data Pipeline Infrastructure Optimization} {Greatly improved the performance, reliability and scalability of internal systems}
+  \cvproject{CIV Backend Infrastructure Optimization} {Greatly improved the performance, reliability and scalability of CIV internal systems}
   \begin{itemize}
-    \item Migrate DynamoDB related operations from single host to EMR cluster. Distribute DDB operations to all executors by using Spark, 7 times faster.
-    \item Implement AWS Lambda Function support in current infrastructure, migrate backend system from hosts to serverless application.
+    \item Migrated DynamoDB related operations from single host to EMR cluster. Used Spark to distribute DDB operations. 7 times faster + more reliable \& scalable
+    \item Implemented AWS Lambda Function support, migrated backend functions to serverless application.
   \end{itemize}
 
-  \cvproject{Contribution Profit Boost Process Automation} {Automate the CP Boost process cross three teams (CIV, Finance, data provider)}
+  \cvproject{Contribution Profit Boost Process Automation} {Designed and implemented the automoted CP Boost pipeline cross three teams}
   \begin{itemize}
-    \item Coordinate \& implement this automated pipeline across multiple teams(...)
-    \item use S3, StepFunction, Pandas, save 70\% of manual works during this process
+    \item Coordinated engineers and economists from three teams to design the schema and validation rules for shareable data.
+    \item Set up cross team automated pipeline to run ETL jobs, validate datasets, generate \& send reports for review.
     \item Reduced manual operation by 80\%. Shortened the entire process from one month to 5 days
   \end{itemize}
 
@@ -138,17 +137,17 @@
 
   \cvcorp{Amazon}{SDE Intern}{May 2019 - Aug 2019}{Seattle}
 
-  \cvproject{CIV Backend 2.0 Prototype} {Designed and implemented extendable Data pipeline backend built fully on Native AWS}
+  \cvproject{CIV Backend 2.0 Prototype} {Extendable data pipeline backend integrated with AWS Services}
   \begin{itemize}
     \item Built data pipeline backend with centralized workflow control based on AWS Step Function
-    \item Developed new features by integrating multiple AWS Services : Lambda Function, CloudWatch, SNS, EMR
+    \item Developed new features by integrating multiple AWS Services : Added alarms via CloudWatch; enabled notification system via SNS; implemented EMR control to run Spark jobs; added util functions for DynamoDB \& S3 to import/export data
   \end{itemize}
 
   \divider
 
   \cvcorp{Carnegie Mellon University }{Capstone Project }{Jan 2020 - May 2020}{Pittsburgh}
 
-  \cvproject{Chatbot to Chatbot QA system  }{Automated chatbot that can make outbound call to IVR\footnote[2]{IVR: Interactive Voice Response System} system, answer IVR questions \& transfer call back to human}
+  \cvproject{Chatbot to Chatbot QA system  }{Chatbot that can make outbound call to IVR\footnote[2]{IVR: Interactive Voice Response System} system, answer IVR questions \& transfer call back to human}
   \begin{itemize}
     \item Integrated with Twillio APIs to make outbound / inbound call and get audio streams
     \item Integrate with Google Cloud Speech-to-Text API to transcribe audit stream in real-time
@@ -161,8 +160,9 @@
   \switchcolumn
 
   \cvsection{Career Objective}
+  \textbf{\emph{Experienced Software enginner with solid knowledge of Big Data, Cloud Computing and AI technologies}}
   % SDE :
-  
+
   % MLE :
   % Data engineer :
   % Distributed Sys :
@@ -171,7 +171,7 @@
   \cvsection{Area Of Interest}
 
   \cvtag{Software Development}
-  \cvtag{NLP}
+  \cvtag{NLP} \\
   \cvtag{Cloud Computing}
   \cvtag{Data Engineering}
   \cvtag{Machine Learning}
@@ -182,26 +182,28 @@
   \cvskill{Python}{4}
   \cvskill{Java}{4}
   \cvskill{C}{4}
+  \cvskill{SQL \& HQL}{4}
   \cvskill{Scala}{3}
   \cvskill{JavaScript}{3}
-  \cvskill{Apache Ant}{3}
-  \cvskill{SQL \& HQL}{4}
   \par
   \bigskip\normalsize
 
-  \cvskill{AWS}{5}
+  \cvskill{AWS Services}{5}
   \cvskill{Git}{4}
-  \cvskill{Spark \& Hadoop}{4}
-  \cvskill{DeepLearning}{4}
   \cvskill{NLP}{4}
-  \cvskill{Distributed System}{3}
+  \cvskill{Distributed System}{4}
+  \cvskill{DeepLearning}{4}
+  \cvskill{Spark \& Hadoop}{3}
 
   % \cvtag{Motivator \& Leader}
 
   \cvsection{Personal SKills}
   \cvtag{Quick Learner}
-  \cvtag{Teamworking}
-  \cvtag{Work well under pressure}
+  \cvtag{Team worker} \\
+  \cvtag{Problem Solving}
+  \cvtag{Self-motivated} \\
+  \cvtag{Flexible \& Responsible}
+
 
   \cvsection{Education}
 
